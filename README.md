@@ -43,33 +43,7 @@ O sistema permite fazer perguntas em linguagem natural e obtém respostas precis
 
 ## 🏗️ Arquitetura
 
-┌─────────────────────────────────────────────────────────────────┐
-│ INTERFACE │
-│ Streamlit App │
-└─────────────────────────────────────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────────────────────────────────────┐
-│ MOTOR RAG │
-│ ┌─────────────────┐ ┌─────────────────────────────────────┐ │
-│ │ Tradução │───▶│ Busca Semântica │ │
-│ │ (Deep Trans) │ │ (ChromaDB) │ │
-│ └─────────────────┘ └─────────────────────────────────────┘ │
-│ │ │
-│ ▼ │
-│ ┌─────────────────────────────────────────────────────────────┐│
-│ │ Geração de Respostas (Groq/Llama 3) ││
-│ └─────────────────────────────────────────────────────────────┘│
-└─────────────────────────────────────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────────────────────────────────────┐
-│ CAMADA DE DADOS │
-│ ┌─────────────────┐ ┌─────────────────────────────────────┐ │
-│ │ Pipeline ETL │───▶│ ChromaDB (Banco Vetorial) │ │
-│ │ (Pandas) │ │ 50.000+ documentos │ │
-│ └─────────────────┘ └─────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────────────────┘
+[img]
 
 
 ---
@@ -114,40 +88,7 @@ O sistema permite fazer perguntas em linguagem natural e obtém respostas precis
 ## 📁 Estrutura do Projeto
 
 
-DATA-SEARCH-AI/
-
-│
-
-├── app/
-
-│ └── main.py # Interface Streamlit
-
-│
-
-├── data/
-
-│ ├── IMDB Dataset.csv # 50.000 críticas de filmes
-
-│ ├── sobre_ia.txt # Documento sobre Inteligência Artificial
-
-│ └── sobre_rag.txt # Documento sobre RAG
-
-│
-
-├── src/
-│ ├── database/
-│ │ └── vector_db.py # Conexão e operações com ChromaDB
-│ ├── etl/
-│ │ └── etl_pipeline.py # Pipeline ETL
-│ └── rag/
-│ └── rag_engine.py # Motor RAG principal
-│
-├── .env # Variáveis de ambiente
-├── .gitignore # Arquivos ignorados no Git
-├── requirements.txt # Dependências do projeto
-├── reload_imdb.py # Script para carregar dataset
-├── README.md # Documentação
-└── LICENSE # Licença MIT
+[img]
 
 
 
