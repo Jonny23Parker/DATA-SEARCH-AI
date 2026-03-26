@@ -43,8 +43,9 @@ O sistema permite fazer perguntas em linguagem natural e obtém respostas precis
 
 ## 🏗️ Arquitetura
 
-[img]
+## Interface do Sistema
 
+![Interface do DATA-SEARCH-AI](https://github.com/Jonny23Parker/DATA-SEARCH-AI/blob/main/img/Arquitetura%20img.jpg)
 
 ---
 
@@ -87,10 +88,9 @@ O sistema permite fazer perguntas em linguagem natural e obtém respostas precis
 
 ## 📁 Estrutura do Projeto
 
+## Interface do Sistema
 
-[img]
-
-
+![Interface do DATA-SEARCH-AI](https://github.com/Jonny23Parker/DATA-SEARCH-AI/blob/main/img/Estrutura%20img.jpg)
 
 ---
 
@@ -99,15 +99,28 @@ O sistema permite fazer perguntas em linguagem natural e obtém respostas precis
 ### 1. Clone o repositório
 
 ```bash
+
 git clone https://github.com/Jonny23Parker/data-search-ai.git
 cd data-search-ai
 
----
+```
 
+## 2. Download manual
+```bash
 
+O download automático precisa de criar conta e autenticação de token no Kaggle, manualmente neste caso foi mais rapido:
 
+Acesse: https://www.kaggle.com/datasets/waseemalastal/imdb-dataset
 
-2. Crie e ative o ambiente virtual
+Baixe o arquivo IMDB Dataset.csv
+
+Coloque na pasta data/ do projeto
+
+```
+
+## 3. Crie e ative o ambiente virtual
+
+```bash
 
 # Windows
 python -m venv venv
@@ -117,9 +130,97 @@ venv\Scripts\activate
 python3 -m venv venv
 source venv/bin/activate
 
+```
 
-
-
-3. Instale as dependências
+## 4. Instale as dependências
+```bash
 
 pip install -r requirements.txt
+
+```
+
+## 5. Configure as variáveis de ambiente
+```bash
+
+GROQ_API_KEY=sua_chave_aqui
+
+🔑 Obtenha sua chave gratuitamente em: console.groq.com/keys
+
+```
+
+## 6. Carregue os dados no ChromaDB
+```bash
+
+python reload_imdb.py
+
+⏱️ Atenção: Esta etapa pode levar de 10 a 20 minutos na primeira execução (processa 50.000 críticas).
+
+```
+
+
+## 7. Inicie a interface
+
+```
+
+streamlit run app/main.py
+
+Acesse: http://localhost:8501
+
+```
+
+
+## ✅ Verificação rápida
+Após iniciar, você deve ver:
+
+* ✅ Conexão com ChromaDB estabelecida
+
+* ✅ Mensagem "Motor RAG inicializado"
+
+* ✅ Interface aberta no navegador
+
+
+
+## 8. Iniciar via START.bat
+
+Voce pode criar um arquivo de texto e inserir os comanddos abaixo, para ser executado diretemente da área de trabalho em sua maquina.
+nasta criar o arquivo e renomear a extensão para nomeescolhido.bat
+
+```
+@echo off
+cd /d "F:\Curriculos Jonatas\PORTFOLIO DADOS\data-search-ai"
+call .\venv\Scripts\activate
+streamlit run app/main.py
+pause
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
