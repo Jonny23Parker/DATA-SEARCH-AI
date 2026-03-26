@@ -1,0 +1,25 @@
+# IA e Embeddings
+openai>=1.0.0
+langchain>=0.1.0
+langchain-community
+langchain-openai
+
+# Banco de Dados
+psycopg2-binary
+pgvector
+sqlalchemy
+
+# Processamento de Dados
+pandas
+numpy
+
+# Interface e API
+streamlit
+fastapi
+uvicorn
+
+# Utilitários
+python-dotenv
+tiktoken
+PyPDF2  # para ler PDFs
+unstructured  # para documentos diversos
