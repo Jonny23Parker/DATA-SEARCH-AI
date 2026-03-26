@@ -1,0 +1,5 @@
+Inteligência Artificial (IA) é um campo da ciência da computação dedicado a criar sistemas capazes de realizar tarefas que normalmente requerem inteligência humana. Isso inclui aprendizado de máquina, processamento de linguagem natural, visão computacional e raciocínio.
+
+O aprendizado de máquina é uma subárea da IA que permite que sistemas aprendam com dados sem serem explicitamente programados. Existem três tipos principais: supervisionado, não supervisionado e por reforço.
+
+Processamento de Linguagem Natural (PLN) é a área que permite que computadores entendam, interpretem e gerem linguagem humana. Aplicações incluem chatbots, análise de sentimentos e tradução automática.
