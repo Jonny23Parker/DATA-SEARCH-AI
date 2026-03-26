@@ -1,0 +1,13 @@
+RAG (Retrieval-Augmented Generation) é uma arquitetura de IA que combina sistemas de recuperação de informações com modelos de geração de texto.
+
+Como funciona o RAG:
+1. O usuário faz uma pergunta
+2. O sistema busca documentos relevantes em uma base de conhecimento
+3. Os documentos recuperados são enviados junto com a pergunta para um modelo de linguagem
+4. O modelo gera uma resposta baseada nos documentos encontrados
+
+Vantagens do RAG:
+- Respostas mais precisas e atualizadas
+- Reduz alucinações do modelo
+- Permite citar fontes
+- Fácil atualização da base de conhecimento
